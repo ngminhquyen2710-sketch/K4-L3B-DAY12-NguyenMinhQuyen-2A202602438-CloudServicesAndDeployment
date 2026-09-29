@@ -10,17 +10,17 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Họ và tên | (điền họ tên) |
-| Mã học viên | (điền mã học viên) |
-| Repo | (điền link repo K4-L3B-DAY12-HoVaTen-MSSV-CloudServicesAndDeployment) |
+| Họ và tên | Nguyen Minh Quyen |
+| Mã học viên | 2A202602438 |
+| Repo | https://github.com/ngminhquyen2710-sketch/K4-L3B-DAY12-NguyenMinhQuyen-2A202602438-CloudServicesAndDeployment |
 
 ## Service
 
 | Mục | Nội dung |
 |-----|----------|
-| Public URL | https://TODO-thay-bang-url-that.up.railway.app |
-| Platform | Railway / Render / Cloud Run — (điền platform bạn dùng) |
-| Ngày deploy | (điền ngày) |
+| Public URL | https://day12-agent-production-a627.up.railway.app |
+| Platform | Railway |
+| Ngày deploy | 2026-09-29 |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
@@ -29,8 +29,8 @@ Ghi tên biến và **nguồn giá trị**, không ghi giá trị:
 | Biến | Đã set | Ghi chú |
 |------|--------|---------|
 | `PORT` | ✅ | platform tự gán |
-| `AGENT_API_KEY` | ✅ | đặt trong dashboard, không nằm trong repo |
-| `REDIS_URL` | ✅ | (điền: Redis add-on của platform / Upstash / ...) |
+| `AGENT_API_KEY` | ✅ | Đặt trong Railway Variables; giá trị không được ghi vào repo |
+| `REDIS_URL` | ✅ | Redis service `day12-redis` của Railway |
 | `RATE_LIMIT_PER_MINUTE` | ✅ | 10 |
 | `MONTHLY_BUDGET_USD` | ✅ | 10.0 |
 | `LOG_LEVEL` | ✅ | INFO |
@@ -73,7 +73,12 @@ done; echo
 Dán output của các lệnh trên vào đây:
 
 ```
-(điền output)
+2026-09-29 — https://day12-agent-production-a627.up.railway.app
+GET /health: 200 {"status":"ok","service":"day12-agent","version":"1.0.0"}
+GET /ready: 200 {"status":"ready","redis":true}
+POST /ask không có key: 401
+POST /ask có key: 200
+15 POST /ask có key: 200 x 10, sau đó 429 x 5
 ```
 
 ## Ảnh Chụp Màn Hình
@@ -97,5 +102,5 @@ Không đăng ký được tài khoản cloud? Vẫn nộp được bài, nhưng
 5. Ghi rõ lý do không deploy được vào phần dưới đây:
 
 ```
-(điền lý do nếu dùng phương án dự phòng, ngược lại xóa mục này)
+Không dùng phương án dự phòng.
 ```
