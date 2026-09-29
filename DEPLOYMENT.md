@@ -10,7 +10,7 @@
 
 | Mục | Nội dung |
 |-----|----------|
-| Họ và tên | Nguyen Minh Quyen |
+| Họ và tên | Nguyễn Minh Quyền |
 | Mã học viên | 2A202602438 |
 | Repo | https://github.com/ngminhquyen2710-sketch/K4-L3B-DAY12-NguyenMinhQuyen-2A202602438-CloudServicesAndDeployment |
 
